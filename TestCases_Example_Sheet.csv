@@ -1,0 +1,73 @@
+Test Case ID,Test Scenario,Precondition,Test Condition,Test Case Steps,Test Data,Expected Result,Automation Results,Actual Result Iteration 1,"Status
+ Iteration 1","Actual Result Iteration 2
+(to be updated only if test case failed in Iteration 1) ","Status
+ Iteration 2
+(to be updated only if test case failed in Iteration 1)",Comments,Req: Reference
+TC_LOGIN_001,Verification of User can login with Correct credentials.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that user is able to login to the website with valid Username and Password,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ 
+ Username=Prit@gmail.com
+ Password=cg@123","The browser window should open
+ The Home page should load.",Yes,,,,,,
+TC_LOGIN_002,Verification of User can't login without correct credentials.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that user should be denied an access to the website upon entering invalid Username & invalid password,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ 
+ Username= akshay
+ Password=12@345",The Home page should not load.,Yes,,,,,,
+TC_LOGIN_003,Verification of User can't login without correct credentials.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that user should be denied an access to the website upon entering invalid Username but valid Password,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ Username= akshay
+ Password=cg@123",The Home page should not load.,Yes,,,,,,
+TC_LOGIN_004,Verification of User can't login without correct credentials.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that user should be denied an access to the website upon entering valid Username but invalid Password,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ Username= Prit@gmail.com
+ Password=company@123",The Home page should not load.,Yes,,,,,,
+TC_LOGIN_005,Verification of Username field shouldn't be empty.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that Username field should not be left empty,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ 
+ Password=cg@123",The Home page should not load.,Yes,,,,,,
+TC_LOGIN_006,Verification of Password field shouldn't be empty.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that Password field should not be left empty,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ Username= Prit@gmail.com",The Home page should not load.,Yes,,,,,,

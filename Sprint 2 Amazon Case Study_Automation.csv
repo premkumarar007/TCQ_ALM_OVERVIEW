@@ -1,0 +1,1240 @@
+Test Case ID,Test Scenario,Precondition,Test Condition,Test Case Steps,Test Data,Expected Result,Automation Results,Actual Result Iteration 1,"Status
+ Iteration 1","Actual Result Iteration 2
+(to be updated only if test case failed in Iteration 1) ","Status
+ Iteration 2
+(to be updated only if test case failed in Iteration 1)",Comments,Req: Reference
+TC001,TS_001,The registration page should be available,Validate the person age,"1)Launch the browser
+2) Navigate to the URL
+3) Clcik on Reister button
+4) Enter the invalid age
+5) Click on submit button","1) chrome
+2) www.abc.com
+3)17 ","It should throw error meaae ""Invalid age""",,,,,,,
+TC002,TS_001,The registration page should be available,Validate the person age,"1)Launch the browser
+2) Navigate to the URL
+3) Clcik on Reister button
+4) Enter the valid age
+5) Click on submit button","1) chrome
+2) www.abc.com
+3)18 ",It should proceed further,,,,,,,
+TC003,TS_001,The registration page should be available,Validate the person age,"1)Launch the browser
+2) Navigate to the URL
+3) Clcik on Reister button
+4) Enter the valid age
+5) Click on submit button","1) chrome
+2) www.abc.com
+3)19",It should proceed further,,,,,,,
+TC004,TS_001,The registration page should be available,Validate the person age,"1)Launch the browser
+2) Navigate to the URL
+3) Clcik on Reister button
+4) Enter the valid age
+5) Click on submit button","1) chrome
+2) www.abc.com
+3)98",It should proceed further,,,,,,,
+TC005,TS_001,The registration page should be available,Validate the person age,"1)Launch the browser
+2) Navigate to the URL
+3) Clcik on Reister button
+4) Enter the valid age
+5) Click on submit button","1) chrome
+2) www.abc.com
+3)99",It should proceed further,,,,,,,
+TC001,TS_001,The registration page should be available,Validate the person age,"1)Launch the browser
+2) Navigate to the URL
+3) Clcik on Reister button
+4) Enter the invalid age
+5) Click on submit button","1) chrome
+2) www.abc.com
+3)100","It should throw error meaae ""Invalid age""",,,,,,,
+TC_LOGIN_001,Verification of User can login with Correct credentials.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that user is able to login to the website with valid Username and Password,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ 
+ Username=Prit@gmail.com
+ Password=cg@123","The browser window should open
+ The Home page should load.",Yes,,,,,,
+TC_LOGIN_002,Verification of User can't login without correct credentials.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that user should be denied an access to the website upon entering invalid Username & invalid password,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ 
+ Username= akshay
+ Password=12@345",The Home page should not load.,Yes,,,,,,
+TC_LOGIN_003,Verification of User can't login without correct credentials.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that user should be denied an access to the website upon entering invalid Username but valid Password,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ Username= akshay
+ Password=cg@123",The Home page should not load.,Yes,,,,,,
+TC_LOGIN_004,Verification of User can't login without correct credentials.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that user should be denied an access to the website upon entering valid Username but invalid Password,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ Username= Prit@gmail.com
+ Password=company@123",The Home page should not load.,Yes,,,,,,
+TC_LOGIN_005,Verification of Username field shouldn't be empty.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that Username field should not be left empty,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ 
+ Password=cg@123",The Home page should not load.,Yes,,,,,,
+TC_LOGIN_006,Verification of Password field shouldn't be empty.,"User has already 
+ registered on the website.
+ User has a valid username & password.
+ The Login page is available.",To validate that Password field should not be left empty,"1. Open Browser
+ 2. Enter URL for the website
+ 3. Click on Login link
+ 4. Enter Username
+ 5. Enter Password
+ 6. Click on Sign In button","https://www.amazon.in
+ Username= Prit@gmail.com",The Home page should not load.,Yes,,,,,,
+TC_search_product_01,Verification of availability of search option,"1. Browser should be open
+ 2. Amazon website should be open",To validate if the search option is loaded with a proper UI.,"1. Open edge Browser
+ 2. Load amazon website","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""","1. search box should be display
+ 2. search box should get focus",Yes,,,,,,
+TC_search_product_02,Verification of editability of search option,"1. Browser should be open
+ 2. Amazon website should be open",To validate if search box is clickable and editable,"1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = ""laptop""","1. search box should get focus (cursor should be inside the search box)
+ 2. search box should display the characters",Yes,,,,,,
+TC_search_product_03,Verification of auto suggestion availability,"1. Browser should be open
+ 2. Amazon website should be open","To validate if Typing any single character in the search box, it should show a list of product suggestions starting with the entered character","1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = ""l""","1. search results should show a list ofproduct suggesstions starting with ""l"" character",No,,,,,yes,
+TC_search_product_04,Verification of auto suggestion availability,"1. Browser should be open
+ 2. Amazon website should be open","To validate if Type any single character and try to select an item, the user should be able to choose a product from the dropdown product list.","1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = ""laptop""",1. User should be able to choose a product from the dropdown product list,Yes,,,,,,
+TC_search_product_05,verification of functionality of search box,"1. Browser should be open
+ 2. Amazon website should be open","To validate if enter a random character, it should load the result page with an error message like ""No results found"".","1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = *%$#","1.search result should be load the page with error message like ""no results found"".",Yes,,,,,,
+TC_search_product_06,verification of functionality of search box,"1. Browser should be open
+ 2. Amazon website should be open","To validate Combination of alphanumeric character,string, character, number, it should load result page (as per requirement)","1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = ""laptop 50000""",1.search result should be load.,Yes,,,,,,
+TC_search_product_07,verification of functionality of search box,"1. Browser should be open
+ 2. Amazon website should be open","To validate if Type any single character, it should display ten suggestions in the list format.","1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = ""l""","1. Type any single character, it should display ten suggestions in the list format.",No,,,,,yes,
+TC_search_product_08,verification of functionality of search box,"1. Browser should be open
+ 2. Amazon website should be open","To validate if entering nothing/ click on the search button, it should show the same page without refreshing the page","1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = """"",1 search is blank then it should show same page without refreshing the page,Yes,,,,,,
+TC_search_product_09,verification of functionality of search box,"1. Browser should be open
+ 2. Amazon website should be open",To validate if the search box allow searching with incorrect spellings,"1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = ""lptop""",1.search result should be load.,Yes,,,,,,
+TC_search_product_11,Verification of search rules,"1. Browser should be open
+ 2. Amazon website should be open",To validate search rules defined for “similar Match” with the search key word,"1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = ""laptop 50000""",1. search result should load the results of a similar match with the search keyword,Yes,,,,,,
+TC_search_product_12,Verification of search rules,"1. Browser should be open
+ 2. Amazon website should be open",To validate if user should be able to search when he enters the keyword and hits ‘Enter’ button on keyboard,"1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = ""laptop 50000""","1. search result should be load after entering the search keyword or by hitting the ""Enter"" button on keyboard",Yes,,,,,,
+TC_search_product_13,Verification of search rules,"1. Browser should be open
+ 2. Amazon website should be open",To validate the limitation of search characters,"1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = greater than 250 character","1. User should get error mesage ""you exceeds the character limit""",Yes,,,,,,
+TC_search_product_14,Verification of search rules,"1. Browser should be open
+ 2. Amazon website should be open",To validate the link navigation ,"1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on search box
+ 4. Type any characters in the search box","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ____
+ 4. Characters = ""Laptop""",1. when search result is loaded te should get navigated,Yes,,,,,,
+TC_search_product_15,"verification of ""microphone"" functionality","1. Browser should be open
+2. Amazon website should be open","To validate if select microphone, say valid product name should able to load result page with valid product","1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on microphone
+ 4. say something","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. microphone
+ 4. words=""laptop""",1. search result page should be loaded with a valid produts name said by user.,No,,,,,,
+TC_search_product_16,"verification of ""microphone"" functionality","1. Browser should be open
+2. Amazon website should be open","To validate if select microphone, say invalid product name should show an option to “try again” or “type your search","1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on microphone
+ 4. say something","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. microphone
+ 4. words=""abcdefgh""","1. search result page should be show an option to ""try again"" or ""type your search""",No,,,,,,
+TC_search_product_17,"Verification of ""camera"" functionality","1. Browser should be open
+2. Amazon website should be open",To validate if camera and gallery popup,"1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on camera","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. camera",1. camera and gallery pop-up.,No,,,,,,
+TC_search_product_18,"Verification of ""camera"" functionality","1. Browser should be open
+2. Amazon website should be open","To validate if Selection of the camera button, scan a product should allow scanning a product","1. Open edge Browser
+ 2. Load amazon website
+ 3. Click on camera
+ 4. scan any product using camera","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. camera
+ 4. image = laptop","1. search result page should load results of the product laptop with different cost , brands, etc.",No,,,,,,
+TC_search_product_19,Verification of selection of categories,"1. Browser should be open
+2. Amazon website should be open",To validate if selection of a category should show the selected category is highlighted,"1. Open edge Browser
+ 2. Load amazon website
+ 3. search categories
+ 4. select catogory","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. search = ctegory
+ 4. select ""laptop""",1. Selected category should be highlighted,No,,,,,,
+TC_search_product_20,"Verification of ""All"" dropdown list","1. Browser should be open
+2. Amazon website should be open","To validate whether the ""All"" dropdown list of category loaded properly","1. Open edge Browser
+ 2. Load amazon website
+ 3. search categories
+ 4. select catogory","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ""All"" dropdown","The ""All"" dropdown option should be appeared",Yes,,,,,,
+TC_search_product_21,"Verification of ""All"" dropdown list ","1. Browser should be open
+2. Amazon website should be open",To validate the category selected by user loaded with proper result,"1. Open edge Browser
+ 2. Load amazon website
+ 3. select catogory ""Electronics"" from ""All"" dropdown","1. browser = edge
+ 2. URL= ""https://www.amazon.in/""
+ 3. ""All"" dropdown list
+ 4. select ""electronics""",The selected category should be loaded with proper search result,Yes,,,,,,
+,,,,,,,,,,,,,
+TC_Wishlist_001,"verification of ""wishlist"" option appearance in list menu","1.Browser should be open
+ 2.amazon home page should be loaded",To validate if wishlist option appeared in list menu,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu","1.browser=edge
+ 2.url=""https//www.amazon.com""","As we clickon list menu of Amazon home page ""Wishlist"" Option should be appeared",Yes,,,,,,
+TC_Wishlist_002,Verification of create wishlist option,"1.Browser should be open
+ 2.amazon home page should be loaded",To validate if it is clickable,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.click on create wishlist option","1.browser=edge
+ 2.url=""https//www.amazon.com""",Create wishlist option should be clickable,Yes,,,,,,
+TC_Wishlist_003,Verification of create wishlist option,"1.Browser should be open
+ 2.amazon home page should be loaded",To validate ii it opens create wishlist window after clicking on create wishlist option,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.click on create wishlist option","1.browser=edge
+ 2.url=""https//www.amazon.com""","As cliscked on ""wishlist"" option ""create wishlist"" window should be open",Yes,,,,,,
+TC_Wishlist_004,Verification of create wishlist option,"1.Browser should be open
+ 2.amazon home page should be loaded",To validate If it is show save option,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.click on create wishlist option","1.browser=edge
+ 2.url=""https//www.amazon.com""","as we open ""create wishlist"" window ""save"" option should be appeared",Yes,,,,,,
+TC_Wishlist_005,"Verification of ""list name"" text box of create wishlist category","1.Browser should be open
+ 2.amazon home page should be loaded","To validate if it accept characters,numbers and symbols.","1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.click on create wishlist option","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.List name=""Mylist@1""","List name field should accept characters,symbols and numbers.",Yes,,,,,,
+TC_Wishlist_006,"Verification of ""list name"" text box of create wishlist category","1.Browser should be open
+ 2.amazon home page should be loaded",To validate if it accept minimum 1 character,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.click on create wishlist option","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.List name=""M""",List name field should accept minimum 1 character,Yes,,,,,,
+TC_Wishlist_007,"Verification of ""list name"" text box of create wishlist category","1.Browser should be open
+ 2.amazon home page should be loaded",To validate if it accept maximum 255 characters,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.click on create wishlist option","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 
+ 3.charcters=""Harshvardhan""eg.write upto 255 characters",List name field should accept maximum 255 character,Yes,,,,,,
+TC_Wishlist_008,"Verification of ""list name"" text box of create wishlist category","1.Browser should be open
+ 2.amazon home page should be loaded",To validate if it is mandatory field,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.click on create wishlist option","1.browser=edge
+ 2.url=""https//www.amazon.com""",List name should not be left blank,Yes,,,,,,
+TC_Wishlist_009,Verification of save option of create wishlist category,"1.Browser should be open
+ 2.amazon home page should be loaded",To validate if it is clickable,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.click on create wishlist option 
+ 5.click on save option","1.browser=edge
+ 2.url=""https//www.amazon.com""",Save option should be clickable and generate valid output,Yes,,,,,,
+TC_Wishlist_010,Verification of save option of create wishlist category,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""Create wishlist"" page should be open","To validate if save option is clicked and list name appeared in ""your list"" List.","1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.click on create wishlist option 
+ 5.click on save option","1.browser=edge
+ 2.url=""https//www.amazon.com""","As we click on save option saved ""list name"" should be appered in ""your list"" List",Yes,,,,,,
+TC_Wishlist_011,Verification of created wishlist are by default private,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open",To validate if Wishlist are by default in private access only,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list","1.browser=edge
+ 2.url=""https//www.amazon.com""","As we open our created list it should pe ""private"" by default",Yes,,,,,,
+TC_Wishlist_012,Verification of creating multiple wishlist,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.Allready one list should be creted",To validate if user can crete new list if allready list are present,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.click on create wishlist option","1.browser=edge
+ 2.url=""https//www.amazon.com""",New wish list shoul be creted if allready wishlist are present,No,,,,,Yes,
+TC_Wishlist_013,Verification of update wishlist properly,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.search option should be available",To validate if added product by user is present in a wishlist,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Search product","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.product=""Hp I5 Laptop""",added products should be displayed in wishlist,Yes,,,,,,
+TC_Wishlist_014,Verification of update wishlist properly,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.search option should be available",To validate if user can added multiple product on same wishlist,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Search product","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.product=All laptops with ""Hp I5"" criteria",user should be added multiple products in one wishlist,Yes,,,,,,
+TC_Wishlist_015,Verification of add to cart option for specific item can be added to cart,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open","To validate if ""Add to cart"" option present on every item of wishlist","1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list","1.browser=edge
+ 2.url=""https//www.amazon.com""",add to cart option should be presnt on every item of wishlist,Yes,,,,,,
+TC_Wishlist_016,Verification of add to cart option for specific item can be added to cart,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.search option should be available
+ 4.""your list"" page should be open",2.To validate if specific item will be added to cart after clicking,"1. Open edge Browser
+ 2. Load amazon url
+ 3. search product
+ 4.Click on Add to cart
+ 5.open wishlist","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.product=""hp i5 laptop""","As we click on ""Add to cart"" option the product should appeared in wishlist",No,,,,,,
+TC_Wishlist_017,Verification of user can move product from one wishlist to another,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open",To validate if it shows move option for every wishlist item,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list","1.browser=edge
+ 2.url=""https//www.amazon.com""","As we open wishlist ""Move"" option should be available for every product",Yes,,,,,,
+TC_Wishlist_018,Verification of user can move product from one wishlist to another,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.Move option should be available",Validate if item moved from one wishlist to another after clicking move option,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.Click on move option
+ 6.select any other list to move product","1.browser=edge
+ 2.url=""https//www.amazon.com""","As we clickon ""move"" option It should be ask for list name and product should be moved on perticular list",Yes,,,,,,
+TC_Wishlist_019,Verification of delete product option to user can delete specific item from wishlist,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open",Validate if delete option available for every wishlist item,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list","1.browser=edge
+ 2.url=""https//www.amazon.com""","As we open wishlist ""Delete"" option should be available for every product",Yes,,,,,,
+TC_Wishlist_020,Verification of delete product option to user can delete specific item from wishlist,"1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.Delete option should be available","Validate if specific item will be removed after clicking ""delete"" option","1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.Select any product from list
+ 5.Click on Delete option","1.browser=edge
+ 2.url=""https//www.amazon.com""","As we click on ""Delete"" optionan perticular selected product should be deleted from the list.",Yes,,,,,,
+TC_Wishlist_021,"Verification of add comment,quantity and priority option for all wishlist items","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.",To validate If option available for every item in a list,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list","1.browser=edge
+ 2.url=""https//www.amazon.com""","when open created wishlist an ""Add comment,quantity and priority "" optionshould be available for every product in a list.",Yes,,,,,,
+TC_Wishlist_022,"Verification of add comment,quantity and priority option for all wishlist items","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.",to validate if it opens new window after click on it,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option","1.browser=edge
+ 2.url=""https//www.amazon.com""","As we click on ""Add comment, quantity and priority"" option An new window should be open to fill the details.",Yes,,,,,,
+TC_Wishlist_023,"Verification of add comment,quantity and priority option for all wishlist items","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded","to validate if it shows Comment,quantity and priority option","1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list","1.browser=edge
+ 2.url=""https//www.amazon.com""","As we click on ""Add comment, quantity and priority"" option An new window should contains ""comment"" ,""Quantity"" And ""Priority"" Fields.",Yes,,,,,,
+TC_Wishlist_024,"Verification of comment field of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded
+ 6.Comment option should be available",To validate if it can be null,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option
+ 6.make comment field empty
+ 7.And click on Save option","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.Comment=""""",As we click on save with empty comment field it should save successfully without error.,Yes,,,,,,
+TC_Wishlist_025,"Verification of comment field of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded
+ 6.Comment option should be available","To validate if it accept character,symbol and digit","1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option
+ 6.Click on ""comment"" fileld","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.Comment=""All hp laptops added in alist Harsh@123""",Comment Filed should accept entered data Without error.,Yes,,,,,,
+TC_Wishlist_026,"Verification of comment field of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded
+ 6.Comment option should be available",.To validate if it accepts 250 characters,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option
+ 6.Click on ""comment"" fileld","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.Comment=""All hp laptops added in alist Harsh@123""eg.write upto 255 characters",Comment filed should accept 250 charecters without any error after 250 character it Should display error message.,Yes,,,,,,
+TC_Wishlist_027,"Verification of priority list of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded",To validate If it shows prioririty list,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option","1.browser=edge
+ 2.url=""https//www.amazon.com""","As we click on ""Add comment, quantity and priority"" option An new window should be open with priority option appeared in a window.",Yes,,,,,,
+TC_Wishlist_028,"Verification of priority list of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded
+ 6.Priority list should be available","To validate if it shows 4 priorities ''low',''medium"",""high"",""highest"".","1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option
+ 6.Click on priority ""select list""","1.browser=edge
+ 2.url=""https//www.amazon.com""","priority list should be avilable with ''low',''medium"",""high"" And ""highest"" priorities",Yes,,,,,,
+TC_Wishlist_029,"Verification of priority list of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded
+ 6.Priority list should be available",To validate if all are selctable,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option
+ 6.Click on ""priority"" select list .","1.browser=edge
+ 2.url=""https//www.amazon.com""",as we click on any option of salect it should be selectable.,Yes,,,,,,
+TC_Wishlist_030,"Verification of priority list of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded
+ 6.Priority list should be available",To validate if only one will be select at a time.,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option
+ 6.Click on ""priority"" select list .","1.browser=edge
+ 2.url=""https//www.amazon.com""",As we click on any one option from select list it shold be closed and show only one selected option.,Yes,,,,,,
+TC_Wishlist_031,"Verification of quantity field of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded
+ 6.Quantity field should be available",To validate if it is editable,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option
+ 6.Click on ""Quantity"" text box","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.Quantity=""123""","As we click on ""Quantity"" box it should accept data from user.",Yes,,,,,,
+TC_Wishlist_032,"Verification of quantity field of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded
+ 6.Quantity field should be available",To validate if it accept only numbers,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option
+ 6.Click on ""Quantity"" text box","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.Quantity=""123""",As we enter any numbers it should accept it.,Yes,,,,,,
+TC_Wishlist_033,"Verification of quantity field of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded
+ 6.Quantity field should be available",To validate if it accept maximun 5 digit,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option
+ 6.Click on ""Quantity"" text box","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.Quantity=""12345""",Quantity field should accept numbers upto 5 digit.,Yes,,,,,,
+TC_Wishlist_034,"Verification of quantity field of add comment,quantity and priority category","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.
+ 5.""Add comment,quantity and priority "" Window should be loaded
+ 6.Quantity field should be available",To validate if it accept minimum 1 digit.,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list
+ 5.click on ""Add comment,quantity and priority "" option
+ 6.Click on ""Quantity"" text box","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.Quantity=""1""",Quantity field should accept minimum one digit.,Yes,,,,,,
+TC_Wishlist_035,"Verification of ""item added date"" for all items with there specific dates","1.Browser should be open
+ 2.amazon home page should be loaded
+ 3.""your list"" page should be open
+ 4.some products should be added in a list.",To validate if it shows item added date at the front of wishlist item,"1. Open edge Browser
+ 2. Load amazon url
+ 3. Click on list menu
+ 4.open creted list","1.browser=edge
+ 2.url=""https//www.amazon.com""",Product added date should be available in front of product,Yes,,,,,,
+,,,,,,,,,,,,,
+TC_Add to Cart_01,Verification of Add cart Functionality.,"1. login to the account 
+ 2. Product is searched.",To validate wheather product is adding to cart or not.,"1. Login to the account 
+2. Search the requried product. 
+3.Select the add to cart button to add the product to cart.",1. Add to cart button,"1. Add to cart should be working to add the product to cart 
+ 2. When we click on add to cart product should be added",Yes,,,,,,
+TC_Add to Cart_02,Verification of Add cart Functionality.,"1. login to the account 
+ 2. Product is searched. 3.Product should be added to wishlist",To validate Wheather product is removed from the Wishlist after adding the product to the cart.,"1. Login to the account 
+ 2. Search the requried product. 3.The product should to added to wishlist 4.Select the add to cart button to add the product to cart","1.product in Wishlist 
+2.product in Cart",1. When we click on add to cart product should be added 2.Product in the wishlist should be deleted,No,,,,,,
+TC_Add to Cart_03,Verification of Add cart Functionality.,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate increment of number of items in cart,"1. Login to the account 
+2. Search the requried product. 
+3.Select the add to cart button to add the product to cart",1.Increment of products in Cart,1. When we click on add to cart product should be added 2.Product in the cart should be incremented.,Yes,,,,,,
+TC_Add to Cart_04,Verification of display of product details in the cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate the display of details of the product.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart",1.Detils of product in Cart,"1. Product Name,brand and image of product should be displayed in the cart . 2.Product price should be displayed in the cart. 3. Product Seller name should be displayed in the cart.",Yes,,,,,,
+TC_Add to Cart_05,Verification of display of product details in the cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate the display of Quantity of the product.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart",1.Detils of product in Cart,1. Number of product added to cart should be displayed.,Yes,,,,,,
+TC_Add to Cart_06,Verification of display of product details in the cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate the display of stock status.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart",1.Product added stock status should be displayed.,1. if Product is in stock the stock status should be displayed as stock available. 2. if Product is not in stock the stock status should be displayed as Out of stock.,Yes,,,,,,
+TC_Add to Cart_07,Verification of Total and Subtotal details in the cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate the increment of subtotal after adding product to the cart,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart",1.Vaild total increment.,1. Display of Subtotal 2. The increment of subtotal after adding product to the cart,Yes,,,,,,
+TC_Add to Cart_08,Verification of Total and Subtotal details in the cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate the total amount displayed to user should include the taxes and shipping charges as per location.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart",1.Vaild total increment.,"1.Tax should be displayed and added to total
+ 2. Shipping charge as per the loction should be added to total 3.Total amount should increment
+ 4. Display of Total.",Yes,,,,,,
+TC_Add to Cart_09,Verification of product removing from the cart.,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate delete of the product after clicking delete button in cart.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart","1.Delete button In the cart
+ 2. After clicking delete product should 
+ delete","1. Display of ""delete"" button
+ 2. Clicking on delete button the product should be removed from the cart",Yes,,,,,,
+TC_Add to Cart_10,Verification of product removing from the cart.,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate save for later list after clicking save for later button.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart","1. ""Save for later""button In the cart
+ 2. After clicking ""save for later "" the product is saved in save for later list and removed from cart","1. Display of ""Save for later"" button
+ 2. Clicking on ""Save for later"" button the product should be removed from the cart and saved in save for later list",Yes,,,,,,
+TC_Add to Cart_11,Verification of product removing from the cart.,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate decrement of subtotal after deleting the product.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart","1. ""Wishlist""button In the cart
+ 2. After clicking ""Wishlist "" the product is saved in save for later list and removed from cart","1. Display of ""Wishlist"" button
+ 2. Clicking on""Wishlist"" button the product should be removed from the cart and saved in save for later list",Yes,,,,,,
+TC_Add to Cart_12,Verification of Proceed to Buy button in cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart","To validate ""Proceed to Buy "" button","1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart","1."" Proceed to Buy "" button","1. Display of Proceed to Buy. 2.Clicking "" Procced to Buy"" the page should navigate to address or payment page",Yes,,,,,,
+TC_Add to Cart_13,Verification of Proceed to Buy button in cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart","To validate after clicking Proceed to Buy ,it should proceed to select delivery address page.","1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart","1."" Proceed to Buy "" button. 2.Navigation of page","1.Clicking "" Procced to Buy"" the page should navigate to address page if address is not selected before. 2.Clicking "" Procced to Buy"" the page should navigate to address page if they are mutiple delivert address.",No,,,,,,
+TC_Add to Cart_14,Verification of Display of Suggestions below the added product in the cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate if the address is selected before the page should proceed to payment.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart","1."" Proceed to Buy "" button. 2.Navigation of page","1.Clicking "" Procced to Buy"" the page should navigate to payment page if address is selected before.",No,,,,,,
+TC_Add to Cart_15,Verification of Display of Suggestions below the added product in the cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",2. To validate the Display of Buy it again .,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart","1.""Buy it again"" list in suggestion.","1.Display of ""Buy it again"" list in suggestion below cart products",Yes,,,,,,
+TC_Add to Cart_16,Verification of Display of Suggestions below the added product in the cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",3.To validate the Display of Top pick for you.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart","1.""Top pick for you ""list in suggestion.","1.Display of ""Top pick for you"" list in suggestion below cart products",Yes,,,,,,
+TC_Add to Cart_17,Verification of Display of Suggestions below the added product in the cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate the Display of more item to explore.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart","1.""More item to explore""list in suggestion.","1.Display of ""More item to explore"" list in suggestion below cart products",Yes,,,,,,
+TC_Add to Cart_18,Verification of Display of Suggestions below the added product in the cart,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate the Display of more item to explore.,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart","1.""Save for later""list in suggestion.","1.Display of ""Save for later"" list in suggestion below cart products",Yes,,,,,,
+TC_Add to Cart_19,Verification of Cart product after user logout and login again,"1. login to the account 
+ 2. Product is searched. 3.Product is added to cart",To validate the added product in cart should remain same even after user logout and login again,"1. Login to the account 
+ 2. Search the requried product. 3.Select the add to cart button to add the product to cart",1. Cart products,1. the added product in cart should remain same even after user logout and login again,No,,,,,,
+,,,,,,,,,,,,,
+TC_Address_01,Verification of Proceed to Buy option,"Customer has already registerd on website.
+ He enters valid user name and password.
+ Adds products to cart.
+ Selected payment option.",To verify if proceed to buy button is visible and at proper loaction and of proper size.,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'","1.browser=edge
+ 2.url=""https//www.amazon.com""
+",Customer should see 'proceed to buy' button at its proper location.,No,,,,,,
+TC_Address_02,Verificaton of Proceed to Buy option,"Customer has already registerd on website.
+ He enters valid user name and password.
+ Selected payment option.
+ Adds products to cart.",To verify if proceed to buy button directs customer to address page,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'","1.browser=edge
+ 2.url=""https//www.amazon.com""
+",Customer on clicking 'proceed to buy' button should proceed him to address page.,Yes,,,,,,
+TC_Address_03,Verification of Add Address field,"Customer has already registerd on website.
+ He enters valid user name and password.
+ Adds products to cart.
+ Selected payment option.
+ Proceeds to buy.",To verify if 'add address' button is visible and at proper location and of proper size.,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'
+ 5. Click on 'add address'","1.browser=edge
+ 2.url=""https//www.amazon.com""
+",Customer should be able to view that 'add address' button is at its proper location.,No,,,,,,
+TC_Address_04,Verification of Add Address field,"Customer has already registerd on website.
+ He enters valid user name and password.
+ Adds products to cart.
+ Selected payment option.
+ Proceeds to buy.",To verify if 'add address' button directs customer to the page where he can fill the address.,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'
+ 5. Click on 'add address'","1.browser=edge
+ 2.url=""https//www.amazon.com""
+",Customer on clicking 'add address' button takes him to the page where he should be able to add address.,Yes,,,,,,
+TC_Address_05,Verification of Edit address field,"Customer has already registerd on website.
+ He enters valid user name and password.
+ Adds products to cart.
+ Selected payment option.
+ Proceeds to buy.",To verify if 'edit address' button is visible and at proper location and of proper size.,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'
+ 5. Click on 'edit address'","1.browser=edge
+ 2.url=""https//www.amazon.com""
+",Customer should be able to view that 'edit address' button is at its proper location.,No,,,,,,
+TC_Address_06,Verification of Edit address field,"Customer has already registerd on website.
+ He enters valid user name and password.
+ Adds products to cart.
+ Selected payment option.
+ Proceeds to buy.",To verify if 'edit address' button directs customer to the page where he can edit the already filled address.,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'
+ 5. Click on 'edit address'","1.browser=edge
+ 2.url=""https//www.amazon.com""
+",Customer on clicking 'edit address' button should proceed him to the page where he can edit address.,Yes,,,,,,
+TC_Address_07,Verification of Delete address functionality,"Customer has already registerd on website.
+ He enters valid user name and password.
+ Adds products to cart.
+ Selected payment option.
+ Proceeds to buy.",To verify if 'edit address' button is visible and at proper location and of proper size.,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'
+ 5. Click on 'delete address'","1.browser=edge
+ 2.url=""https//www.amazon.com""
+",Customer should be able to view that 'delete address' button is at its proper location.,No,,,,,,
+TC_Address_08,Verification of Delete address functionality,"Customer has already registerd on website.
+ He enters valid user name and password.
+ Adds products to cart.Selected payment option.
+ Proceeds to buy.",To verify if 'delete address' button deletes the address of saved address of thecustomer.,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'
+ 5. Click on 'edit address'","1.browser=edge
+ 2.url=""https//www.amazon.com""
+",Customer on clicking 'delete address' button should take him to the page where he can delete address.,Yes,,,,,,
+TC_Address_09,Verification of Gift Card,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.
+ Added the Address",To verify if the gift card option is clickable and accepts numbers only.,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'
+ 5. Click on 'add coupons'","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3.. Data : 123654",Customer should be able to click inside text box and can add gift cards.,Yes,,,,,,
+TC_Address_10,Verification of Gift Card,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Proceed to buy.
+ Added the Address",To verify if gift card coupon is validated from server.,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'
+ 5. Click on 'add coupons'","1.browser=edge
+ 2.url=""https//www.amazon.com""
+. Data : 123654",Server should validate the gift card coupon correctly.,Yes,,,,,,
+TC_Address_11,Verification of Name field of address section,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify if name field accepts only alphabet characters.,"1. Login as customer.
+ 2. Search the product
+ 3. Add a product to cart
+ 4. Click on 'proceed to buy'
+ 5. Click on 'add address'
+ 5. Click in 'Name' textbox","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ .3. Data : ajdgvd",Text box should accept only alphabet characters.,Yes,,,,,,
+TC_Address_12,Verification of Name field of address section,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify if name field does not accepts any numeric and special symbols.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Name' textbox","""1.browser=edge
+ 2.url=""""https//www.amazon.com""""
+ 3. Data : 456#%$",Text box should not accept any numeric or special symbols.,Yes,,,,,,
+TC_Address_13,Verification of phone number field,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.","To verify invalid length of input, less than 10 in text box of phone number field.","1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Phone number' textbox","1.browser=edge
+ 2.url=""https//www.amazon.com""
+ 3 Data : 456789",Phone number should invalidate phone number less than ten numbers.,Yes,,,,,,
+TC_Address_14,Verification of phone number field,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the invalid length of input larger than 10 in text box of number field.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Phone number' textbox","1.browser=edge
+2.url=""""https//www.amazon.com""""
+3. Data : 123E+10",Phone number should invalidate phone number greater than ten numbers.,Yes,,,,,,
+TC_Address_15,Verification of phone number field,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the mobile number field by entering only 10 blank space .,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Phone number' textbox","""1.browser=edge
+ 2.url=""""https//www.amazon.com""""
+ 3. Data : ""            """,Phone number should invalidate phone number with ten blank spaces.,Yes,,,,,,
+TC_Address_16,Verification of phone number field,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the mobile number field by entering the ten digits.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Phone number' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3. Data : 9.235E+10",Phone number textbox should validate ten digits.,Yes,,,,,,
+TC_Address_17,Verification of Pin code.,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the pin code field by entering the alphabet .,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Pin Code' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3. Data : 9.235E+10",Pin code textbox should not accept any alphabet character.,Yes,,,,,,
+TC_Address_18,Verification of Pin code.,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the pin code field by entering the special char.(eg-@#!#@!),"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Pin Code' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com""
+3. Data : 45%^#%8",Pin code textbox should not accept any special character.,Yes,,,,,,
+TC_Address_19,Verification of Pin code.,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the field without entering any value.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Pin Code' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com""
+3. Data : ""        """,Pin code textbox should not accept any blanks.,Yes,,,,,,
+TC_Address_20,Verification of Pin code.,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the field by entering the less than six digit pin code,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Pin Code' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3. Data : 9156",Pin code textbox should not accept any digits less than six number.,Yes,,,,,,
+TC_Address_21,Verification of Pin code.,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the field by entering the more than six digit pic code,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Pin Code' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com"""" 
+3 Data : 9646453135516",Pin code textbox should not accept any digits more six number.,Yes,,,,,,
+TC_Address_22,"Verification of Flat, House no., Building, Company, Apartment","Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the field by entering alpha numeric characters more than 60 in text box,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Pin Code' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3. Data : sdflksddfjsjfojsdffjsoifjsdfsdfjmdffmsfmofdsfmsdf",Textbox should not accept any alpha numerics characters more than sixty length.,Yes,,,,,,
+TC_Address_23,"Verification of Flat, House no., Building, Company, Apartment","Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the text box by entering 60 blanks in .,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Pin Code' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3. Data : ""       """,Textbox should not accept the sixty blanks.,Yes,,,,,,
+TC_Address_24,"Verification of Flat, House no., Building, Company, Apartment","Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the text box by not entering anything.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Pin Code' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3 Data :  ""    """,Textbox should not accept the text box to be left empty.,Yes,,,,,,
+TC_Address_25,"Verification of Area, Colony, Street, Sector, Village text box.","Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the text box by entering alpha numeric characters more than 60.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Area, Colony, Street,' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3. Data :  lsdlfkmlsdmflsmfkmsfsdmdfosddf","Area, Colony, Street, Sector, Village text box should not accept any alpha numerics characters more than sixty length.",Yes,,,,,,
+TC_Address_26,"Verification of Area, Colony, Street, Sector, Village text box.","Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the text box by entering 60 blanks.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Area, Colony, Street,' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3. Data :  ""    ""","Area, Colony, Street, Sector, Village text box should not accept the sixty blanks.",Yes,,,,,,
+TC_Address_27,"Verification of Area, Colony, Street, Sector, Village text box.","Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify the text box by not entering anything.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click in 'Area, Colony, Street,' textbox","""1.browser=edge 
+2.url=""""https//www.amazon.com"""" 
+3. Data :  """"","Area, Colony, Street, Sector, Village text box should not accept the text box to be left empty.",Yes,,,,,,
+TC_Address_28,Verification of drop down list named State/Provience,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify that the drop down list should have proper title.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click on 'State / Province' drop down button","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3. Data :  Title",The title of the drop-down should be correct.,Yes,,,,,,
+TC_Address_29,Verification of drop down list named State/Provience,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify if selected item of the drop-down list is highlighted.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click on 'State / Province' drop down button","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3. Data :  Item",The selected item of the drop-down should be highligted.,No,,,,,,
+TC_Address_30,Verification of drop down list named State/Provience,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.","To Verify when keyboard alphabets are pressed, items started with respective alphabet should be display in drop down list.","1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click on 'State / Province' drop down button","""1.browser=edge 
+2.url=""""https//www.amazon.com"""" 
+ ","On pressing keyboard alphbet, items starting with alphabhet should be displayed.",No,,,,,,
+TC_Address_31,"Verification of drop down list named Address Type(ex, Home, Office)","Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify if elements of dropdown list are selectable,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click on 'Address Type' drop down button","""1.browser=edge 
+2.url=""""https//www.amazon.com"""" 
+ ",The elements of dropdown list should be selectable on Clicking.,Yes,,,,,,
+TC_Address_32,"Verification of drop down list named Address Type(ex, Home, Office)","Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To Verify if Drop down button has proper title.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click on 'Address Type' drop down button","""1.browser=edge 
+2.url=""""https//www.amazon.com"""" 
+",The Drop down button should have proper title.,Yes,,,,,,
+TC_Address_33,Verification of 'Deliver to this address' button,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To Verify if it is clickable,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click on 'Deliver to this address' drop down button","""1.browser=edge 
+2.url=""""https//www.amazon.com"""" 
+",The deliver to this address button should beclickable.,Yes,,,,,,
+TC_Address_34,Verification of 'Deliver to this address' button,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify if on clicking chooses address as delivery address.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click on 'Deliver to this address' drop down button","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+","On clicking deliver to this address, that address should be selected as delivery address.",Yes,,,,,,
+TC_Address_35,Verification of availability of 'search for a Pickup location' near you,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify if this optioin allows the location to be searched by pin code and address.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click on 'Text box' button in pick up section","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+3. Data : 445125 Location",It should allow the location to be searched by pin code and address.,Yes,,,,,,
+TC_Address_36,Verification of availability of 'search for a Pickup location' near you,"Customer had already registerd on website.
+ He entered valid user name and password.
+ Added products to cart.
+ Selected payment option.
+ Proceed to buy.",To verify if on clicking search button it shows search results.,"1. Login as customer.
+ 2. Search and add the product product to cart
+ 3. Click on 'proceed to buy'
+ 4. Click on 'add address'
+ 5. Click on 'Search' button in pick up section","""1.browser=edge 
+2.url=""""https//www.amazon.com""""
+",It should show the serach results when search button was clicked,Yes,,,,,,
+,,,,,,,,,,,,,
+TC_Procedd_to_buy_01,Verification of Payments option.,"1. Delivery option should be selected.
+ 2. Payments option should be visible to the user.",To validate if the payments option is loaded properly.,"1. Select the preferred delivery option
+ 2. Select the preferred payment method among the options.","1. Valid delivery address.
+ 2. Multiple payments options are visible.","1. Payment by using ""Amazon Pay"" option is available to the user.
+ 2. Payment by using ""Debit Card"" option is available to the user.
+ 3. Payment by using ""Credit Card"" option is available to the user.
+ 4. Payment by using ""Net Banking"" option is available to the user.
+ 5. Payment by using ""UPI"" option is available to the user.
+ 6. Payment by using ""Pay at Delivery"" option is available to the user.
+ 7. Payment by using ""EMI"" option is available to the user.",Yes,,,,,,
+TC_Procedd_to_buy_02,Verification of Payments option.,"1. Delivery option should be selected.
+ 2. Payments option should be visible to the user.",Verification of payment option.,"1. Select the preferred delivery option
+ 2. Select the Amazon Pay option.","1. Valid delivery address.
+ 2. User has Amazon Pay account.","1. User has the Amazon Pay account.
+ 2. User has the amount in their Amazon Pay account.
+ 3. User don't have any Amazon Pay account.
+ 4. User creates a new account.
+ 5. User selects any other option.",Yes,,,,,,
+TC_Procedd_to_buy_03,Verification of Payments option.,"1. Delivery option should be selected.
+ 2. Payments option should be visible to the user.",Verification of payment option.,"1. Select the preferred delivery option
+ 2. Select the Debit Card option.","1. Valid delivery address.
+ 2. User has Debit Card account.","1. User has a Debit Card linked with the Amazon account.
+ 2. User selects the Debit Card.
+ 3. User enters the CVV number.
+ 4. If user is not having any Debit Card linked with the account, then user can add a Debit Card.
+ 5. User selects any other option.",Yes,,,,,,
+TC_Procedd_to_buy_04,Verification of Payments option.,"1. Delivery option should be selected.
+ 2. Payments option should be visible to the user.",Verification of payment option.,"1. Select the preferred delivery option
+ 2. Select the Credit Card option.","1. Valid delivery address.
+ 2. User has Credit Card account.","1. User has a Credit Card linked with the Amazon account.
+ 2. User selects the Credit Card.
+ 3. User enters the CVV number.
+ 4. If user is not having any Credit Card linked with the account, then user can add a Credit Card.
+ 5. User selects any other option.",Yes,,,,,,
+TC_Procedd_to_buy_05,Verification of Payments option.,"1. Delivery option should be selected.
+ 2. Payments option should be visible to the user.",Verification of payment option.,"1. Select the preferred delivery option
+ 2. Select the Net Banking option.","1. Valid delivery address.
+ 2. User has Net Banking account.","1. User has selected the Net Banking option.
+ 2. User has selected the preferred Bank.
+ 3. User has entered the valid Net Banking credentials.
+ 4. User selects any other option.",Yes,,,,,,
+TC_Procedd_to_buy_06,Verification of Payments option.,"1. Delivery option should be selected.
+ 2. Payments option should be visible to the user.",Verification of payment option.,"1. Select the preferred delivery option
+ 2. Select the UPI option.","1. Valid delivery address.
+ 2. User has UPI account.","1. User has selected the UPI option.
+ 2. User has entered the valid UPI ID.
+ 3. User selects any other option.",Yes,,,,,,
+TC_Procedd_to_buy_07,Verification of Payments option.,"1. Delivery option should be selected.
+ 2. Payments option should be visible to the user.",Verification of payment option.,"1. Select the preferred delivery option
+ 2. Select the Pay at Delivery option.","1. Valid delivery address.
+ 2. User has Pay at Delivery account.","1. User has selected the Pay at Delivery option.
+ 2. User can pay by cash or any other method when order gets delivered.
+ 3. User selects any other option.",Yes,,,,,,
+TC_Procedd_to_buy_08,Verification of Payments option.,"1. Delivery option should be selected.
+ 2. Payments option should be visible to the user.",Verification of payment option.,"1. Select the preferred delivery option
+ 2. Select the EMI option.","1. Valid delivery address.
+ 2. User has EMI account.","1. User has selected the EMI option.
+ 2. User can pay by any other method in installments.
+ 3. User selects any other option.",Yes,,,,,,
+TC_Procedd_to_buy_09,Verification of details.,"1. Delivery option should be selected.
+ 2. Payments option should be visible to the user.",Validating details.,"1. Select the preferred delivery option.
+ 2. Select the paymeny option.
+ 3. Verify the details.","1. Valid delivery address.
+ 2. Payment option is selected.
+ 3. Details are visible to user.","1. User has selected the preferred payment option.
+ 2. User is able to fill the details.",Yes,,,,,,
+TC_Procedd_to_buy_10,Verification of details.,"1. Delivery option should be selected.
+ 2. Payments option should be visible to the user.",Validating details.,"1. Select the preferred delivery option.
+ 2. Select the paymeny option.
+ 3. Verify the details.","1. Valid delivery address.
+ 2. Payment option is selected.
+ 3. Details are visible to user.","1. User has selected the preferred payment option.
+ 2. Details filled by the user is valid",Yes,,,,,,
+TC_Procedd_to_buy_11,Verification of Payment.,1. Payment option is selected.,Payment option is selected.,"1. To verify that the user has selected the payment option.
+ 2. To verify that the selected option is valid.",1. Payment option is selected.,"1. User has selected the preferred payment option.
+ 2. Selected payment option is valid.
+ 3. An error message is displayed if payment method is invalid.",Yes,,,,,,
+TC_Procedd_to_buy_12,Verification of Payment.,1. Payment option is selected.,Payment option is selected.,"1. To verify that the user has selected the payment option.
+ 2. To verify that the selected option is valid.",1. Payment option is selected.,"1. User has selected the preferred payment option.
+ 2. Selected payment option is valid.
+ 3. An OTP has been sent to the registered mobile number of the user.",Yes,,,,,,
+TC_Procedd_to_buy_13,Verification of OTP.,"1. Payment option is selected.
+ 2. OTP is sent to the user.",1. To verify if the user has received an OTP.,"1. To verify if the user has received an OTP.
+ 2. To verify that the user is able to enter the OTP.",1. OTP received by the user.,"1. Selected payment option is valid.
+ 2. An OTP has been sent to the registered mobile number of the user.
+ 3. User has received the OTP.",No,,,,,,
+TC_Procedd_to_buy_14,Verification of OTP.,"1. Payment option is selected.
+ 2. OTP is sent to the user.",1. To verify if the user has received an OTP.,"1. To verify if the user has received an OTP.
+ 2. To verify that the user is able to enter the OTP.",1. OTP received by the user.,"1. Selected payment option is valid.
+ 2. An OTP has been sent to the registered mobile number of the user.
+ 3. User has received the OTP.
+ 4. User is able to enter the OTP.",No,,,,,,
+TC_Procedd_to_buy_15,Verification of OTP.,"1. Payment option is selected.
+ 2. OTP is sent to the user.",1. To verify if the user has received an OTP.,"1. To verify if the user has received an OTP.
+ 2. To verify that the user is able to enter the OTP.",1. OTP received by the user.,"1. Selected payment option is valid.
+ 2. An OTP has been sent to the registered mobile number of the user.
+ 3. User has received the OTP.
+ 4. OTP is valid for 60 seconds only.",No,,,,,,
+TC_Procedd_to_buy_16,Verification of confirmation of order.,"1. Payment option is selected.
+ 2. OTP is sent to the user.
+ 3. User has entered the correct OTP in the reqiured time.",1. To verify the confirmation of the order.,"1. User selects the preferred payment optn.
+ 2. User recieves an OTP.
+ 3. User enters the OTP in stipulated time.
+ 4. User verifies the confirmation of order.",1. Confirmation messages is displayed on the screen.,"1. User has made the payment by using preferred method.
+ 2. User recieves an OTP.
+ 3. User is able to complete the payment by entering the OTP in stipulated time.",Yes,,,,,,
+TC_Procedd_to_buy_17,Verification of confirmation of order.,"1. Payment option is selected.
+ 2. OTP is sent to the user.
+ 3. User has entered the correct OTP in the reqiured time.",1. To verify the confirmation of the order.,"1. User selects the preferred payment optn.
+ 2. User recieves an OTP.
+ 3. User enters the OTP in stipulated time.
+ 4. User verifies the confirmation of order.",1. Confirmation messages is displayed on the screen.,"1. User has made the payment by using preferred method.
+ 2. User recieves an OTP.
+ 3. User is able to complete the payment by entering the OTP in stipulated time.
+ 4. A confirmation message appears on the screen saying "" Your order has been successfully placed "".",Yes,,,,,,
+TC_Procedd_to_buy_18,Verification of confirmation of order.,"1. Payment option is selected.
+ 2. OTP is sent to the user.
+ 3. User has entered the correct OTP in the reqiured time.",1. To verify the confirmation of the order.,"1. User selects the preferred payment optn.
+ 2. User recieves an OTP.
+ 3. User enters the OTP in stipulated time.
+ 4. User verifies the confirmation of order.",1. Confirmation messages is displayed on the screen.,"1. User has made the payment by using preferred method.
+ 2. User recieves an OTP.
+ 3. User is able to complete the payment by entering the OTP in stipulated time.
+ 4. A confirmation message appears on the screen saying "" Your order has been successfully placed "".
+ 5. Order ID is displayed with confirmation message on the screen.",Yes,,,,,,
+TC_Procedd_to_buy_19,Verifiaction of cart count.,"1. Payment option is selected.
+ 2. User has received an OTP.
+ 3. User has enter the OTP.
+ 4. Cart is visible properly.",To validate if cart is visible properly.,"1. User selects the preferred payment optn.
+ 2. User recieves an OTP.
+ 3. User enters the OTP in stipulated time.
+ 4. Payment is made successfully.
+ 5. Order has been placed.","1. Cart is visible propely.
+ 2. User is able to select the cart.","1. Order has been made successfully.
+ 2. Cart is visible properly.
+ 3. User is able to select the cart.",Yes,,,,,,
+TC_Procedd_to_buy_20,Verifiaction of cart count.,"1. Payment option is selected.
+ 2. User has received an OTP.
+ 3. User has enter the OTP.
+ 4. Cart is visible properly.",To validate if cart is visible properly.,"1. User selects the preferred payment optn.
+ 2. User recieves an OTP.
+ 3. User enters the OTP in stipulated time.
+ 4. Payment is made successfully.
+ 5. Order has been placed.","1. Cart is visible propely.
+ 2. User is able to select the cart.","1. Order has been made successfully.
+ 2. Cart is visible properly.
+ 3. User is able to select the cart.
+ 4. Cart count is decreamented by 1.",Yes,,,,,,
+TC_Procedd_to_buy_21,Verifiaction of cart count.,"1. Payment option is selected.
+ 2. User has received an OTP.
+ 3. User has enter the OTP.
+ 4. Cart is visible properly.",To validate if cart is visible properly.,"1. User selects the preferred payment optn.
+ 2. User recieves an OTP.
+ 3. User enters the OTP in stipulated time.
+ 4. Payment is made successfully.
+ 5. Order has been placed.","1. Cart is visible propely.
+ 2. User is able to select the cart.","1. Order has been made successfully.
+ 2. Cart is visible properly.
+ 3. User is able to select the cart.
+ 4. Cart count is decreamented by 1.
+ 5. Remaining items are displayed properly in cart.",Yes,,,,,,
+TC_Procedd_to_buy_22,Verifiaction of cart count.,"1. Payment option is selected.
+ 2. User has received an OTP.
+ 3. User has enter the OTP.
+ 4. Cart is visible properly.",To validate if cart is visible properly.,"1. User selects the preferred payment optn.
+ 2. User recieves an OTP.
+ 3. User enters the OTP in stipulated time.
+ 4. Payment is made successfully.
+ 5. Order has been placed.","1. Cart is visible propely.
+ 2. User is able to select the cart.","1. Order has been made successfully.
+ 2. Cart is visible properly.
+ 3. User is able to select the cart.
+ 4. Cart count is decreamented by 1.
+ 5. Remaining items are displayed properly in cart.
+ 6. Cart with the new cart count is visible from Amazon home screen also.",Yes,,,,,,
+,,,,,,,,,,,,,
+TC_Receiving configuration_01,Verification of Confirmation is sent to user's registered mobile number.,"User has already 
+ ordered a product from website.",To validate whether Confirmation is sent to user's registered mobile number or not.,"1.Open user's mobile phone and check for message from 'Amazon.in'.
+ 2.Check if message contains confirmation details or not.",NA,User should find confirmation message from 'Amazon.in' on his phone.,No,,,,,,
+TC_Receiving configuration_02,Verification of Confirmation is sent to user's registered Email.,"User has already 
+ ordered a product from website.",To validate wheather Confirmation is sent to user's registered Email or not.,"1.Open user's Email and check for Email from 'Amazon.in'.
+ 2.Check if Email contains confirmation details or not.",NA,User should find confirmation Email from 'Amazon.in' on his Email.,Yes,,,,,,
+TC_Receiving configuration_03,Verification of Tracking link is sent to user's registered mobile number.,"User has already 
+ ordered a product from website.",To validate Tracking link is sent to user's registered mobile number or not.,"1.Open user's mobile phone and check for message from 'Amazon.in'.
+ 2.Check if message contains Traking link or not.",NA,User should find Traking Link message from 'Amazon.in' on his phone.,No,,,,,,
+TC_Receiving configuration_04,Verification of Tracking link is sent to user's registered Email.,"User has already 
+ ordered a product from website.",To validate Tracking link is sent to user's registered Email or not.,"1.Open user's Email and check for Email from 'Amazon.in'.
+ 2.Check if Email contains Traking Link or not.",NA,User should find Tranking Link Email from 'Amazon.in' on his Email.,Yes,,,,,,
